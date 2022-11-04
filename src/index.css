@@ -103,6 +103,7 @@ p {
   height: auto;
   margin: 64px 5vw;
   max-width: var(--max-width);
+  /* border: var(--border); */
 }
 
 .twitter-span {
@@ -210,7 +211,7 @@ p {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  height: 30vh;
+  height: 20vh;
   width: 100vw;
 }
 
@@ -264,8 +265,8 @@ p {
   color: black;
   margin: auto;
   max-width: 30rem;
-  /* border: var(--border); */
-  height: 80vh;
+  border: var(--border);
+  height: 100vh;
 }
 .form-details {
   display: flex;
