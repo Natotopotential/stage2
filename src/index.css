@@ -265,7 +265,6 @@ p {
   color: black;
   margin: auto;
   max-width: 30rem;
-  border: var(--border);
   height: 100vh;
 }
 .form-details {
