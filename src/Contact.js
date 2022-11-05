@@ -1,21 +1,25 @@
-import React from 'react'
-import {useState} from "react"
+import React from 'react';
+import { useState } from 'react';
 
 function Contact() {
-const [firstName,setFirstName] = useState("Enter your first name")
-const [lastName,setLastName] = useState("Enter your last name")
+  const [firstName, setFirstName] = useState('Enter your first name');
+  const [lastName, setLastName] = useState('Enter your last name');
 
-const[email,setEmail] = useState('yourname@email.com')
-const [body,setBody] = useState("send me a message and I'll reply as soon as possible")
+  const [email, setEmail] = useState('yourname@email.com');
+  const [body, setBody] = useState(
+    "send me a message and I'll reply as soon as possible"
+  );
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
 
   return (
     <section id='form' className='section'>
       <div className='form-section'>
         <div className='form-title'>
           <h3>Contact Me</h3>
-          <p>
-            Hi there, contact me to ask me about anything you have in mind.
-          </p>
+          <p>Hi there, contact me to ask me about anything you have in mind.</p>
         </div>
         <form className='form-details'>
           <div className='form-profile'>
@@ -23,13 +27,23 @@ const [body,setBody] = useState("send me a message and I'll reply as soon as pos
               <label htmlFor='firstName' id='first__name'>
                 First Name
               </label>
-              <input type='text'value={firstName} className='form-info' />
+              <input
+                type='text'
+                value={firstName}
+                className='form-info'
+                onChange={(e) => setFirstName(e.target.value)}
+              />
             </div>
             <div className='form-control'>
               <label htmlFor='LastName ' id='last__name'>
                 Last Name
               </label>
-              <input type='text'value={lastName} className='form-info' />
+              <input
+                type='text'
+                value={lastName}
+                className='form-info'
+                onChange={(e) => setLastName(e.target.value)}
+              />
             </div>
           </div>
 
@@ -40,7 +54,12 @@ const [body,setBody] = useState("send me a message and I'll reply as soon as pos
           <label htmlFor='email' id='email'>
             Email
           </label>
-          <input type='text' value={email} className='form-info' />
+          <input
+            type='text'
+            value={email}
+            className='form-info'
+            onChange={(e) => setEmail(e.target.value)}
+          />
           <label htmlFor='message' id='message'>
             Message
           </label>
@@ -50,6 +69,7 @@ const [body,setBody] = useState("send me a message and I'll reply as soon as pos
             id='message'
             className='form-message'
             value={body}
+            onChange={(e) => setBody(e.target.value)}
           ></textarea>
           <div className='form-m'>
             <input type='radio' className='form-radio' />
@@ -58,7 +78,9 @@ const [body,setBody] = useState("send me a message and I'll reply as soon as pos
             </label>
           </div>
 
-          <button id='btn__submit'>Send message</button>
+          <button id='btn__submit' onSubmit={handleSubmit}>
+            Send message
+          </button>
         </form>
       </div>
     </section>
