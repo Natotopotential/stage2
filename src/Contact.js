@@ -24,7 +24,7 @@ function Contact() {
         <form className='form-details'>
           <div className='form-profile'>
             <div className='form-control'>
-              <label htmlFor='firstName' id='first__name'>
+              <label htmlFor='firstName' id='first_name'>
                 First Name
               </label>
               <input
@@ -35,7 +35,7 @@ function Contact() {
               />
             </div>
             <div className='form-control'>
-              <label htmlFor='LastName ' id='last__name'>
+              <label htmlFor='LastName ' id='last_name'>
                 Last Name
               </label>
               <input
